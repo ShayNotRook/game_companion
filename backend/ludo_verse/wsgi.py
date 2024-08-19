@@ -1,5 +1,5 @@
 """
-WSGI config for game_companion project.
+WSGI config for ludo_verse project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'game_companion.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ludo_verse.settings')
 
 application = get_wsgi_application()

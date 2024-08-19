@@ -1,0 +1,3 @@
+# LudoVerse
+
+**LudoVerse** is your ultimate hub for everything gaming. Whether you're tracking the games you've played, building a wishlist of games you want to play, or diving deep into the lore and stories behind your favorite titles, PlayAstra has you covered. Explore reviews and comments from other gamers, share your own experiences, and contribute your thoughts and ideas. With PlayAstra, your gaming journey is always just a click away.

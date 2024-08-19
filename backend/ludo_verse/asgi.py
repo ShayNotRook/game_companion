@@ -1,5 +1,5 @@
 """
-ASGI config for game_companion project.
+ASGI config for ludo_verse project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'game_companion.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ludo_verse.settings')
 
 application = get_asgi_application()
