@@ -10,7 +10,7 @@ class BaseUser(AbstractUser):
 
 def profile_pic_path(PROFILE_PIC_ROOT ,filename):
     # Upload PATH => MEDIA_ROOT/ profile_picture
-    return f'{PROFILE_PIC_ROOT}/{filename}'
+    return f'profile_picture/{filename}'
 
 class UserProfile(models.Model):
     user = models.OneToOneField(BaseUser, on_delete=models.CASCADE, related_name='profile', unique=True)
