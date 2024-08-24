@@ -1,15 +1,16 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser  
 from django.conf import settings
+from ludo_verse.settings import PROFILE_PIC_ROOT
 # Create your models here.
 
 class BaseUser(AbstractUser):
     pass
 
 
-def profile_pic_path(filename):
+def profile_pic_path(PROFILE_PIC_ROOT ,filename):
     # Upload PATH => MEDIA_ROOT/ profile_picture
-    return f'profile_picture/{filename}'
+    return f'{PROFILE_PIC_ROOT}/{filename}'
 
 class UserProfile(models.Model):
     user = models.OneToOneField(BaseUser, on_delete=models.CASCADE, related_name='profile', unique=True)
