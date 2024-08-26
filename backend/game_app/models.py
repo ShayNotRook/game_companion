@@ -29,7 +29,7 @@ class Publisher(models.Model):
         return self.name
     
        
-class Developer(models.Model):
+class DeveloperTeam(models.Model):
     name = models.CharField(max_length=300)
     
     def __str__(self) -> str:
@@ -48,7 +48,7 @@ class Game(models.Model):
     genres = models.ManyToManyField(Genre)
     cover = models.ImageField(upload_to=game_upload_path, blank=True, null=True)
     publisher = models.ForeignKey(Publisher, on_delete=models.PROTECT, null=True, blank=True)
-    developer = models.ForeignKey(Developer, on_delete=models.PROTECT, null=True, blank=True)
+    developer = models.ForeignKey(DeveloperTeam, on_delete=models.PROTECT, null=True, blank=True)
     
     # Custom Model Manager
     objects = GameManager()

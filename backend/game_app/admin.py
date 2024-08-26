@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Game, Genre
+from .models import Game, Genre, Publisher, DeveloperTeam
 # Register your models here.
 
 class GameAdmin(admin.ModelAdmin):
@@ -14,3 +14,5 @@ class GameAdmin(admin.ModelAdmin):
 
 admin.site.register(Game, GameAdmin)
 admin.site.register(Genre)
+admin.site.register(Publisher)
+admin.site.register(DeveloperTeam)
