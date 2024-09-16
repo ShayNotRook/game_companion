@@ -7,7 +7,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('game_app', '0003_rename_genre_game_genres'),
+        ('games', '0003_rename_genre_game_genres'),
     ]
 
     operations = [
@@ -28,11 +28,11 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='game',
             name='developer',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.PROTECT, to='game_app.developer'),
+            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.PROTECT, to='games.developer'),
         ),
         migrations.AddField(
             model_name='game',
             name='publisher',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.PROTECT, to='game_app.publisher'),
+            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.PROTECT, to='games.publisher'),
         ),
     ]

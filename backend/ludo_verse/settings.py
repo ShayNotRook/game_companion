@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     
     # Locale
     'users.apps.UsersConfig',
-    'game_app.apps.GameConfig',
+    'games.apps.GameConfig',
 ]
 
 MIDDLEWARE = [
