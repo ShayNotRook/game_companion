@@ -1,0 +1,21 @@
+version: '3'
+services:
+  django:
+    build: 
+      context: ./backend # Path to Django DockerFile
+      dockerfile: DockerFile
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./backend:/app # Maps local code to container
+      - ./backend/db.sqlite3:/app/db.sqlite3 # Maps the SQLite DB file
+    ports:
+      - "8000:8000" # Maps port 8000 on machine to the Django container
+
+  react:
+    build:
+      context: ./frontend # Path to React DockerFile
+      dockerfile: DockerFile
+    volumes:
+      - ./frontend:/app
+    ports:
+      - "3000:5173"    
