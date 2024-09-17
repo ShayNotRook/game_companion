@@ -18,8 +18,8 @@ export interface Game {
     id: number,
     title: string,
     genres: Genre[],
-    cover: string,
-    publisher: Publisher | null,
-    developer: DeveloperTeam | null,    
+    cover_url: string,
+    publisher?: string,
+    developer?: string,    
 }
 

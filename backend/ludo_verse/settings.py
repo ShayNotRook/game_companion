@@ -59,7 +59,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = ['http://localhost:5173']
+# CORS_ALLOWED_ORIGINS = ['http://localhost:5173']
+CORS_ALLOW_ALL_ORIGINS = True
 
 
 ROOT_URLCONF = 'ludo_verse.urls'
@@ -103,7 +104,7 @@ REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': [
         'rest_framework.renderers.JSONRenderer',
         'rest_framework.renderers.BrowsableAPIRenderer',      
-    ]
+    ],
 }
 
 
@@ -124,7 +125,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/

@@ -1,7 +1,7 @@
 import './App.css'
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
-import GamesList from './components/API/fetchGames';
+import GamesList from './components/Games/List/GameList';
 
 function App() {
 
