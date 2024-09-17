@@ -3,7 +3,7 @@ from .models import Game, Genre, Publisher, DeveloperTeam
 # Register your models here.
 
 class GameAdmin(admin.ModelAdmin):
-    list_display = ('title', 'display_genres')
+    list_display = ('title', 'display_genres', 'developer', 'publisher')
     filter_horizontal = ('genres',)
     
     def display_genres(self, obj):

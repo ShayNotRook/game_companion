@@ -1,14 +1,19 @@
 import './App.css'
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+
+import GamesList from './components/API/fetchGames';
 
 function App() {
 
   return (
-    <>
-      <div>
-        <h1>Welcome to <p id='name-tag'>LudoVerse</p></h1>
+    <Router>
+      <div className='App'>
+        <Routes>
+          <Route path='/games' element={<GamesList />}/>
+        </Routes>
       </div>    
-    </>
+    </Router>
   )
-}
+};
 
 export default App

@@ -3,7 +3,7 @@ services:
   django:
     build: 
       context: ./backend # Path to Django DockerFile
-      dockerfile: DockerFile
+      dockerfile: Dockerfile
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - ./backend:/app # Maps local code to container
@@ -14,8 +14,10 @@ services:
   react:
     build:
       context: ./frontend # Path to React DockerFile
-      dockerfile: DockerFile
+      dockerfile: Dockerfile
     volumes:
       - ./frontend:/app
     ports:
-      - "3000:5173"    
+      - "5173:5173"
+    stdin_open: true
+    tty: true 
