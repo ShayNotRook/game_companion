@@ -55,6 +55,7 @@ class Game(models.Model):
     cover = models.ImageField(upload_to=game_upload_path, blank=True, null=True)
     publisher = models.ForeignKey(Publisher, on_delete=models.PROTECT, null=True, blank=True)
     developer = models.ForeignKey(DeveloperTeam, on_delete=models.PROTECT, null=True, blank=True)
+    published_date = models.DateField(blank=True, null=True)
     
     # Custom Model Manager
     objects = GameManager()
