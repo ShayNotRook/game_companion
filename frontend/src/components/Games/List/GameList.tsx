@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { fetchGames } from '../../API/fetchGames';
 import GameCard from '../GameCard';
+import './GamesList.css';
 
 interface Game {
     id: number,
@@ -34,16 +35,19 @@ const GameList: React.FC = () => {
     }
 
     return (
-        <div className='game-list'>
-            {games.map((game) => (
-                <GameCard
-                    key={game.id}
-                    id={game.id}
-                    title={game.title}
-                    genres={game.genres}
-                    cover_url={game.cover_url}
-                />
-            ))}
+        <div className='list-container'>
+            <h1>Games List</h1>
+            <div className='game-list'>
+                {games.map((game) => (
+                    <GameCard
+                        key={game.id}
+                        id={game.id}
+                        title={game.title}
+                        genres={game.genres}
+                        cover_url={game.cover_url}
+                    />
+                ))}
+            </div>
         </div>
     );
 };
