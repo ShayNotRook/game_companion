@@ -53,6 +53,7 @@ class Game(models.Model):
     title = models.CharField(max_length=255)
     genres = models.ManyToManyField(Genre)
     cover = models.ImageField(upload_to=game_upload_path, blank=True, null=True)
+    description = models.TextField(null=True, blank=True)
     publisher = models.ForeignKey(Publisher, on_delete=models.PROTECT, null=True, blank=True)
     developer = models.ForeignKey(DeveloperTeam, on_delete=models.PROTECT, null=True, blank=True)
     published_date = models.DateField(blank=True, null=True)

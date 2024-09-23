@@ -8,6 +8,7 @@ class GameSerializer(serializers.ModelSerializer):
         read_only=True,
         slug_field='name'
     )
+    developer = serializers.StringRelatedField()
     cover_url = serializers.SerializerMethodField()
     class Meta:
         model = Game
