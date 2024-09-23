@@ -1,0 +1,8 @@
+.game-list {
+    display: grid;
+    padding: 8px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Grid Layout */
+    grid-gap: 20px;
+    padding: 30px;
+    background-color: #f9f9f9;
+}
