@@ -10,3 +10,9 @@ class Lore(models.Model):
     
     def __str__(self):
         return f"{self.game} - {self.title[:10]}"
+
+
+
+class Character(models.Model):
+    game = models.ForeignKey(Game, on_delete=models.CASCADE)
+    role = models.CharField()
