@@ -1,0 +1,12 @@
+.footer {
+    margin-top: 20px;
+    background-color: #763418;
+    text-align: center;
+    padding: 1rem;
+    color: white;
+}
+
+.footer p {
+    font-weight: bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

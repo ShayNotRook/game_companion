@@ -1,6 +1,7 @@
 from django.db import models
-from games.models import Game
 
+from games.models import Game
+from .enums import CharacterRoles
 
 class Lore(models.Model):
     game = models.ForeignKey(Game, on_delete=models.CASCADE, related_name='lore')
@@ -15,4 +16,8 @@ class Lore(models.Model):
 
 class Character(models.Model):
     game = models.ForeignKey(Game, on_delete=models.CASCADE)
-    role = models.CharField()
+    role = models.CharField(choices=CharacterRoles)
+    
+    
+class Timeline(models.Model):
+    pass
